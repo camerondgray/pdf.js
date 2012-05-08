@@ -275,7 +275,7 @@ target.firefox = function() {
       FIREFOX_EXTENSION_FILES_TO_COPY =
         ['*.js',
          '*.rdf',
-         '*.svg',
+         'annotation-*.svg',
          '*.png',
          'components',
          '../../LICENSE'],
@@ -371,7 +371,7 @@ target.mozcentral = function() {
       FIREFOX_CONTENT_DIR = EXTENSION_SRC_DIR + '/firefox/content/',
       FIREFOX_EXTENSION_FILES_TO_COPY =
         ['*.js',
-         '*.svg',
+         'annotation-*.svg',
          '*.png',
          'install.rdf.in',
          'README.mozilla',
