@@ -263,6 +263,8 @@ var PDFView = {
                           currentPage.width * currentPage.scale / kCssUnits;
     var pageHeightScale = (container.clientHeight - kScrollbarPadding) /
                            currentPage.height * currentPage.scale / kCssUnits;
+    var pageHeightScale2 = container.clientHeight /
+                           currentPage.height * currentPage.scale / kCssUnits;
     switch (value) {
       case 'page-actual':
         this.setScale(1, resetAutoSettings);
@@ -275,7 +277,7 @@ var PDFView = {
         break;
       case 'page-fit':
         this.setScale(
-            Math.min(pageWidthScale, pageHeightScale), resetAutoSettings);
+            Math.min(pageWidthScale, pageHeightScale2), resetAutoSettings);
         break;
       case 'auto':
         this.setScale(Math.min(1.0, pageWidthScale), resetAutoSettings);
